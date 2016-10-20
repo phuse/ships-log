@@ -11,7 +11,12 @@
 		</small>
 	</div>
 	<div class="ship-body">
-		<?php echo $ship->post_content; ?>
+		<?php
+   			$shipcontent = get_post_field($ship->post_content);
+   			$content_parts = get_extended( $shipcontent );
+   			echo $content_parts['main'];
+ 		?>
+
 	</div>
 
 	<div class="ship-foot">
